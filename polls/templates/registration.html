@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<button name="button" type="button" onclick="window.location.href='http://127.0.0.1:8000/home' ">home</button>
+<button name="button" type="button" onclick="window.location.href='http://127.0.0.1:8000/about' ">about us</button>
+<button name="button" type="button" onclick="window.location.href='http://127.0.0.1:8000/contact' ">contact</button>
+<button name="button" type="button" onclick="window.location.href='http://127.0.0.1:8000/branch' ">branch</button>
+<button name="button" type="button" onclick="window.location.href='http://127.0.0.1:8000/form' ">Registration</button>  
+<button name="button" type="button" onclick="window.location.href='http://127.0.0.1:8000/capImage' ">AI</button>  
+
+<h1> Company Registration Form</h1>
+</head>
+<body  style="background-color:powderblue;">
+<div align="center">
+
+<form action='/index' method="get">{% csrf_token %}
+	<table>
+		<tr>
+			<td>Full Name:</td>
+			<td><input type="text"  placeholder="Full Name" name='Full_Name'><br></td>
+		</tr>
+		<tr>
+			<td>D.O.B:</td>
+			<td><input type="date" name="dob"></td>
+		</tr>
+		<tr>
+			<td>Telephone:</td>
+			<td><input type="number" name="phone" pattern="[0-9]{10}" maxlength='10' ></td>
+		</tr>
+		<tr>
+			<td>Email Address:</td>
+			<td><input type="email"  placeholder=”Email” name='Signupid'></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input type="password" placeholder=”Password” name='Signuppass'></td>
+		</tr>
+		<tr>
+			 
+			<td>Gender:</td>
+			<td><input type="checkbox" name="Male" value="Male"> Male<br>
+			<input type="checkbox" name="Female" value="Female"> Female<br>	</td>
+		</tr>
+
+		
+		<div align="center">
+			<tr>
+				<td><button name="signup_with_Image" type="login" value="signup_with_Image" >signup & Capture Image</button></td>
+			</tr>	
+		</div>
+		
+		
+		
+	</table>
+	<table>
+		<tr>
+			<br><br><br><br><br><br><td>Email Address:</td>
+			<td><input type="text"  placeholder=”Email” name='id'></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input type="text" placeholder=”Password” name='pass'></td>
+		</tr>
+		<tr>
+			<td><button name="button" type="login" >login</button> </td><br>
+		</tr>
+		<div align="center">
+			<tr>
+				<td><button name="login_with_Image" type="login" value="login_with_Image" >Login AI</button></td>
+			</tr>	
+		</div>
+				
+	</table>
+		 
+
+</form>
+</div> 
+</body>
+</html>
+
+
